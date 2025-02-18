@@ -25,7 +25,7 @@ public:
     }
     void result() {
         ofstream fout;
-        fout.open("/Users/yangjaemin/Library/Mobile Documents/com~apple~CloudDocs/강의자료/시스템소프트웨어/2023111938_양재민_10주차/newpro/result.txt", ios::app); // append mode
+        fout.open("result.txt", ios::app); // append mode
         if (fout.is_open()) {
             
             if(operror ==false){
@@ -86,7 +86,7 @@ int main() {
     vector<string> src;
     string tmp, tmp1, opcode;
     ifstream fin;
-    fin.open("/Users/yangjaemin/Library/Mobile Documents/com~apple~CloudDocs/강의자료/시스템소프트웨어/2023111938_양재민_10주차/newpro/optab.txt");
+    fin.open("optab.txt");
     if (!fin) {
         cerr << "optab.txt 파일 입력 오류" << endl;
         return 1; // 프로그램 종료
@@ -98,7 +98,7 @@ int main() {
     }
     fin.close();
     
-    fin.open("/Users/yangjaemin/Library/Mobile Documents/com~apple~CloudDocs/강의자료/시스템소프트웨어/2023111938_양재민_10주차/newpro/SRCFILE"); // srcfile 읽기
+    fin.open("SRCFILE"); // srcfile 읽기
     if (!fin) {
         cerr << "SRCFILE 파일 입력 오류" << endl;
         return 1; // 프로그램 종료
